@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Slashy Redirect Reminder",
   "version": "1.1",
-  "description": "Reminds you to visit Slashy instead of Gmail (Notion-style UI).",
+  "description": "Reminds you to visit Slashy instead of Gmail.",
   "background": {
     "service_worker": "background.js"
   },
