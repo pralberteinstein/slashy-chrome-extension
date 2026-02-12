@@ -1,3 +1,3 @@
 chrome.runtime.onInstalled.addListener(() => {
-  console.log("Slashy Extension (Notion style) installed!");
+  console.log("Slashy Extension installed!");
 });
