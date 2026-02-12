@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Slashy Redirect Reminder",
+  "version": "1.1",
+  "description": "Reminds you to visit Slashy instead of Gmail (Notion-style UI).",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Slashy Extension"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/icon128.png"],
+      "matches": ["https://mail.google.com/*"]
+    }
+  ]
+}
