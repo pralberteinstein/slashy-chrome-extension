@@ -1,4 +1,9 @@
-if (!window.slashyCalendarPopupShown) {
+// Skip redirect popup when viewing a meeting/appointment/event in Google Calendar
+const calendarPath = window.location.pathname + window.location.search + window.location.hash;
+const isMeetingPage = /\/(eventedit|event|appointment)(\/|$|\?)/.test(calendarPath)
+  || /eid=/.test(window.location.search);
+
+if (!window.slashyCalendarPopupShown && !isMeetingPage) {
   window.slashyCalendarPopupShown = true;
 
   // Create overlay backdrop
